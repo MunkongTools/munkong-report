@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ร้านมั่นคงอุปกรณ์ — สถานะสต็อก</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #f3f4f6; color: #111827;
+         font-family: -apple-system, "Segoe UI", "Sarabun", Tahoma, sans-serif; }
+  header { background: #14532d; color: #fff; padding: 18px 16px; }
+  header h1 { margin: 0; font-size: 20px; }
+  header .as-of { opacity: .85; font-size: 13px; margin-top: 4px; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 16px; }
+  .kpis { display: grid; gap: 12px; grid-template-columns: repeat(3, 1fr); }
+  .kpi { background: #fff; border-radius: 14px; padding: 16px; text-align: center;
+         box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+  .kpi-label { font-size: 12px; color: #6b7280; }
+  .kpi-val { font-size: 20px; font-weight: 700; margin: 6px 0 2px; }
+  .kpi-sub { font-size: 12px; color: #6b7280; }
+  .note { font-size: 12px; color: #9ca3af; margin: 10px 2px 0; }
+  h2 { font-size: 16px; margin: 24px 0 10px; }
+  .panel { background: #fff; border-radius: 14px; padding: 14px; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+  .nav { display: flex; gap: 8px; margin: 14px 0; flex-wrap: wrap; }
+  .nav a { flex: 1; min-width: 140px; text-align: center; background: #fff; border-radius: 12px;
+           padding: 10px; font-size: 13px; text-decoration: none; color: #14532d; font-weight: 600;
+           box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+  .bar-row { display: flex; align-items: center; gap: 8px; margin: 6px 0; font-size: 13px; }
+  .bar-name { width: 38%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .bar-track { flex: 1; background: #eef2f7; border-radius: 6px; height: 16px; }
+  .bar-fill { background: #16a34a; height: 100%; border-radius: 6px; }
+  .bar-val { width: 84px; text-align: right; color: #374151; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { text-align: left; padding: 7px 6px; border-bottom: 1px solid #f0f0f0; }
+  th { color: #6b7280; font-weight: 600; }
+  td.num, th.num { text-align: right; white-space: nowrap; }
+  footer { text-align: center; color: #9ca3af; font-size: 12px; padding: 18px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>ร้านมั่นคงอุปกรณ์</h1>
+  <div class="as-of">สถานะสต็อกสินค้า · ข้อมูล ณ 31 ก.ค. 2569</div>
+</header>
+<div class="wrap">
+  <div class="nav">
+    <a href="dashboard.html">ดูยอดขาย →</a>
+    <a href="stock-report.xlsx">โหลด Excel สต็อกทั้งหมด</a>
+    <a href="missing-cost-items.xlsx">โหลดรายการยังไม่ใส่ทุน</a>
+  </div>
+  <div class="kpis">
+    
+      <div class="kpi">
+        <div class="kpi-label">มูลค่าสต็อก (ทุน)</div>
+        <div class="kpi-val">฿3,276,752</div>
+        
+      </div>
+    
+      <div class="kpi">
+        <div class="kpi-label">มูลค่าสต็อก (ราคาขาย)</div>
+        <div class="kpi-val">฿5,028,195</div>
+        
+      </div>
+    
+      <div class="kpi">
+        <div class="kpi-label">กำไรหากขายหมด</div>
+        <div class="kpi-val">฿1,751,443</div>
+        <div class="kpi-sub">2,112 รายการ</div>
+      </div>
+  </div>
+  <div class="note">* ไม่รวม 380 รายการที่ยังไม่ได้ใส่ราคาทุนใน POS · ดูรายการทั้งหมดในไฟล์ Excel</div>
+
+  <h2>สินค้าที่จมทุนมากที่สุด (15 อันดับ)</h2>
+  <div class="panel">
+        <div class="bar-row">
+          <div class="bar-name" title="แผงโซลาร์เซลล์ 600W BG mono half PSI">แผงโซลาร์เซลล์ 600W BG mono half PSI</div>
+          <div class="bar-track"><div class="bar-fill" style="width:100.0%"></div></div>
+          <div class="bar-val">฿99,788</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-name" title="เครื่องรับPSI S9">เครื่องรับPSI S9</div>
+          <div class="bar-track"><div class="bar-fill" style="width:61.9%"></div></div>
+          <div class="bar-val">฿61,750</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-name" title="C Band 05-LNB PSI X2 5G+Ring">C Band 05-LNB PSI X2 5G+Ring</div>
+          <div class="bar-track"><div class="bar-fill" style="width:36.2%"></div></div>
+          <div class="bar-val">฿36,080</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-name" title="หลอดLED T8 LAMPO 18w #HARU">หลอดLED T8 LAMPO 18w #HARU</div>
+          <div class="bar-track"><div class="bar-fill" style="width:33.7%"></div></div>
+          <div class="bar-val">฿33,660</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-name" title="ปลั๊กฝัง3P 2ที่ Bewon">ปลั๊กฝัง3P 2ที่ Bewon</div>
+          <div class="bar-track"><div class="bar-fill" style="width:31.6%"></div></div>
+          <div class="bar-val">฿31,535</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-name" title="ท่อขาว Bewon 16mm 3ม.">ท่อขาว Bewon 16mm 3ม.</div>
+          <div class="bar-track"><div class="bar-fill" style="width:29.3%"></div></div>
+          <div class="bar-val">฿29,207</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-name" title="พัดลมสไลด์ 16 นิ้ว HATARI#C1">พัดลมสไลด์ 16 นิ้ว HATARI#C1</div>
+          <div class="bar-track"><div class="bar-fill" style="width:27.2%"></div></div>
+          <div class="bar-val">฿27,125</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-name" title="หลอดบับ 25w LAMPO">หลอดบับ 25w LAMPO</div>
+          <div class="bar-track"><div class="bar-fill" style="width:23.4%"></div></div>
+          <div class="bar-val">฿23,400</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-name" title="พัดลมสไลด์ 16 นิ้ว คาริเบียน #16SF1">พัดลมสไลด์ 16 นิ้ว คาริเบียน #16SF1</div>
+          <div class="bar-track"><div class="bar-fill" style="width:21.3%"></div></div>
+          <div class="bar-val">฿21,275</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-name" title="โคมถนนโซลาร์เซลล์ UFO Bewon 1000W">โคมถนนโซลาร์เซลล์ UFO Bewon 1000W</div>
+          <div class="bar-track"><div class="bar-fill" style="width:21.3%"></div></div>
+          <div class="bar-val">฿21,242</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-name" title="พัดลมตั้งโต๊ะ 16 นิ้ว HATARI#M1">พัดลมตั้งโต๊ะ 16 นิ้ว HATARI#M1</div>
+          <div class="bar-track"><div class="bar-fill" style="width:21.0%"></div></div>
+          <div class="bar-val">฿21,000</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-name" title="หลอดบับ  9W LAMPO DL">หลอดบับ  9W LAMPO DL</div>
+          <div class="bar-track"><div class="bar-fill" style="width:20.5%"></div></div>
+          <div class="bar-val">฿20,432</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-name" title="พัดลมสไลด์ 18 นิ้ว HATARI#C1">พัดลมสไลด์ 18 นิ้ว HATARI#C1</div>
+          <div class="bar-track"><div class="bar-fill" style="width:19.4%"></div></div>
+          <div class="bar-val">฿19,380</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-name" title="หลอดบับ  9W EVE#Sps DL">หลอดบับ  9W EVE#Sps DL</div>
+          <div class="bar-track"><div class="bar-fill" style="width:17.6%"></div></div>
+          <div class="bar-val">฿17,533</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-name" title="ปั๊มหอยโข่ง750W ท่อ2"PSI#C7">ปั๊มหอยโข่ง750W ท่อ2"PSI#C7</div>
+          <div class="bar-track"><div class="bar-fill" style="width:16.2%"></div></div>
+          <div class="bar-val">฿16,200</div>
+        </div></div>
+
+  <h2>รายละเอียด 15 อันดับ</h2>
+  <div class="panel">
+    <table>
+      <tr><th>สินค้า</th><th class="num">คงเหลือ</th><th class="num">มูลค่าทุน</th><th class="num">ราคาขาย</th></tr>
+      <tr><td>แผงโซลาร์เซลล์ 600W BG mono half PSI</td><td class="num">38</td><td class="num">฿99,788</td><td class="num">฿104,880</td></tr><tr><td>เครื่องรับPSI S9</td><td class="num">130</td><td class="num">฿61,750</td><td class="num">฿102,700</td></tr><tr><td>C Band 05-LNB PSI X2 5G+Ring</td><td class="num">82</td><td class="num">฿36,080</td><td class="num">฿45,100</td></tr><tr><td>หลอดLED T8 LAMPO 18w #HARU</td><td class="num">561</td><td class="num">฿33,660</td><td class="num">฿44,880</td></tr><tr><td>ปลั๊กฝัง3P 2ที่ Bewon</td><td class="num">901</td><td class="num">฿31,535</td><td class="num">฿45,050</td></tr><tr><td>ท่อขาว Bewon 16mm 3ม.</td><td class="num">1,281</td><td class="num">฿29,207</td><td class="num">฿40,992</td></tr><tr><td>พัดลมสไลด์ 16 นิ้ว HATARI#C1</td><td class="num">31</td><td class="num">฿27,125</td><td class="num">฿33,480</td></tr><tr><td>หลอดบับ 25w LAMPO</td><td class="num">390</td><td class="num">฿23,400</td><td class="num">฿46,800</td></tr><tr><td>พัดลมสไลด์ 16 นิ้ว คาริเบียน #16SF1</td><td class="num">37</td><td class="num">฿21,275</td><td class="num">฿29,600</td></tr><tr><td>โคมถนนโซลาร์เซลล์ UFO Bewon 1000W</td><td class="num">13</td><td class="num">฿21,242</td><td class="num">฿23,140</td></tr><tr><td>พัดลมตั้งโต๊ะ 16 นิ้ว HATARI#M1</td><td class="num">25</td><td class="num">฿21,000</td><td class="num">฿23,750</td></tr><tr><td>หลอดบับ  9W LAMPO DL</td><td class="num">1,277</td><td class="num">฿20,432</td><td class="num">฿83,005</td></tr><tr><td>พัดลมสไลด์ 18 นิ้ว HATARI#C1</td><td class="num">17</td><td class="num">฿19,380</td><td class="num">฿22,950</td></tr><tr><td>หลอดบับ  9W EVE#Sps DL</td><td class="num">394</td><td class="num">฿17,533</td><td class="num">฿25,610</td></tr><tr><td>ปั๊มหอยโข่ง750W ท่อ2"PSI#C7</td><td class="num">2</td><td class="num">฿16,200</td><td class="num">฿19,200</td></tr>
+    </table>
+  </div>
+</div>
+<footer>สร้างโดยระบบติดตามยอดขาย · 2026-07-31</footer>
+</body>
+</html>

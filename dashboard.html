@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ร้านมั่นคงอุปกรณ์ — ยอดขายรายเดือน</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #f3f4f6; color: #111827;
+         font-family: -apple-system, "Segoe UI", "Sarabun", Tahoma, sans-serif; }
+  header { background: #1f4e78; color: #fff; padding: 18px 16px; }
+  header h1 { margin: 0; font-size: 20px; }
+  header .as-of { opacity: .85; font-size: 13px; margin-top: 4px; }
+  .wrap { max-width: 700px; margin: 0 auto; padding: 16px; }
+  .kpis { display: grid; gap: 12px; grid-template-columns: repeat(3, 1fr); }
+  .kpi { background: #fff; border-radius: 14px; padding: 16px; text-align: center;
+         box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+  .kpi-label { font-size: 12px; color: #6b7280; }
+  .kpi-val { font-size: 22px; font-weight: 700; margin: 6px 0 2px; }
+  .kpi-sub { font-size: 12px; color: #6b7280; }
+  h2 { font-size: 16px; margin: 24px 0 10px; }
+  .panel { background: #fff; border-radius: 14px; padding: 14px; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+  .nav { display: flex; gap: 8px; margin: 14px 0; }
+  .nav a { flex: 1; text-align: center; background: #fff; border-radius: 12px; padding: 10px;
+           font-size: 13px; text-decoration: none; color: #1f4e78; font-weight: 600;
+           box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+  .br-row { display: flex; justify-content: space-between; padding: 8px 4px;
+            border-bottom: 1px solid #f0f0f0; font-size: 14px; }
+  .br-row.minus span.num { color: #b91c1c; }
+  .br-row.total { font-weight: 700; background: #f8fafc; }
+  .br-row.profit { font-weight: 700; color: #059669; font-size: 16px; border-bottom: none; }
+  .compare { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 10px; padding: 12px 14px;
+             background: #fff; border-radius: 14px; font-size: 14px; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+  .compare.none { color: #9ca3af; font-size: 13px; }
+  .compare .up { color: #059669; font-weight: 600; }
+  .compare .down { color: #b91c1c; font-weight: 600; }
+  .compare .flat { color: #9ca3af; }
+  .bar-row { display: flex; align-items: center; gap: 8px; margin: 6px 0; font-size: 13px; }
+  .bar-day { width: 48px; color: #6b7280; text-align: right; }
+  .bar-track { flex: 1; background: #eef2f7; border-radius: 6px; height: 18px; }
+  .bar-fill { background: #93c5fd; height: 100%; border-radius: 6px; }
+  .bar-fill.cur { background: #2563eb; }
+  .bar-val { width: 70px; text-align: right; color: #374151; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { text-align: left; padding: 7px 6px; border-bottom: 1px solid #f0f0f0; }
+  th { color: #6b7280; font-weight: 600; }
+  td.num, th.num { text-align: right; white-space: nowrap; }
+  footer { text-align: center; color: #9ca3af; font-size: 12px; padding: 18px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>ร้านมั่นคงอุปกรณ์</h1>
+  <div class="as-of">ยอดขายประจำเดือน ก.ค. 2569 · ข้อมูลถึงวันที่ 31 ก.ค. 2569</div>
+</header>
+<div class="wrap">
+  <div class="nav"><a href="stock-dashboard.html">ดูสต็อกสินค้า →</a></div>
+  <div class="kpis">
+    
+      <div class="kpi">
+        <div class="kpi-label">ยอดขายสุทธิ</div>
+        <div class="kpi-val">฿324,631</div>
+        
+      </div>
+    
+      <div class="kpi">
+        <div class="kpi-label">กำไรขั้นต้น</div>
+        <div class="kpi-val">฿100,358</div>
+        
+      </div>
+    
+      <div class="kpi">
+        <div class="kpi-label">อัตรากำไร</div>
+        <div class="kpi-val">31%</div>
+        <div class="kpi-sub">697 บิล</div>
+      </div>
+  </div>
+  
+      <div class="compare">
+        <div>เทียบกับ มิ.ย. 2569</div>
+        <div>ยอดขายสุทธิ <span class="down">▼ 9%</span></div>
+        <div>กำไร <span class="down">▼ 17%</span></div>
+      </div>
+
+  <h2>สรุปยอดเดือนนี้</h2>
+  <div class="panel"><div class="br-row "><span>ยอดขายรวม (Gross sales)</span><span class="num">฿330,335</span></div><div class="br-row minus"><span>หัก ส่วนลด (Discounts)</span><span class="num">฿-3,954</span></div><div class="br-row minus"><span>หัก คืนเงิน (Refunds)</span><span class="num">฿-1,750</span></div><div class="br-row total"><span>ยอดขายสุทธิ (Net sales)</span><span class="num">฿324,631</span></div><div class="br-row minus"><span>หัก ต้นทุนสินค้า (COGS)</span><span class="num">฿-224,274</span></div><div class="br-row profit"><span>กำไรขั้นต้น (Gross profit)</span><span class="num">฿100,358</span></div></div>
+
+  <h2>แนวโน้มยอดขายสุทธิรายเดือน</h2>
+  <div class="panel">
+        <div class="bar-row">
+          <div class="bar-day">พ.ค. 69</div>
+          <div class="bar-track"><div class="bar-fill " style="width:34.5%"></div></div>
+          <div class="bar-val">123,298</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-day">มิ.ย. 69</div>
+          <div class="bar-track"><div class="bar-fill " style="width:100.0%"></div></div>
+          <div class="bar-val">357,667</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-day">ก.ค. 69</div>
+          <div class="bar-track"><div class="bar-fill cur" style="width:90.8%"></div></div>
+          <div class="bar-val">324,631</div>
+        </div></div>
+
+  <h2>สินค้าขายดี (เดือนนี้)</h2>
+  <div class="panel">
+    <table>
+      <tr><th>สินค้า</th><th class="num">จำนวน</th><th class="num">ยอดขาย</th><th class="num">กำไร</th></tr>
+      <tr><td>เครื่องรับPSI S9</td><td class="num">29</td><td class="num">22,639</td><td class="num">8,864</td></tr><tr><td>พัดลมตั้งโต๊ะ 16 นิ้ว คาริเบียน#TF1</td><td class="num">26</td><td class="num">15,309</td><td class="num">4,019</td></tr><tr><td>พัดลมสไลด์ 16 นิ้ว HATARI#C1(DS)</td><td class="num">10</td><td class="num">10,000</td><td class="num">1,350</td></tr><tr><td>พัดลมสไลด์ 16 นิ้ว HATARI#C1</td><td class="num">8</td><td class="num">8,430</td><td class="num">1,510</td></tr><tr><td>พัดลมสไลด์ 16 นิ้ว คาริเบียน #16SF1(DS)</td><td class="num">8</td><td class="num">5,920</td><td class="num">1,595</td></tr><tr><td>สายTHW-A 1x50 100m Century</td><td class="num">2</td><td class="num">5,800</td><td class="num">200</td></tr><tr><td>ตู้โหลด 2 ช่อง Bewon</td><td class="num">10</td><td class="num">4,937</td><td class="num">2,107</td></tr><tr><td>โคมไฟสปอตไลท์โซลาร์เซลล์ LAMPO 100W #INDICA</td><td class="num">5</td><td class="num">4,888</td><td class="num">388</td></tr><tr><td>พัดลมตั้งโต๊ะ 16 นิ้ว คาริเบียน#TF1(DS)</td><td class="num">8</td><td class="num">4,480</td><td class="num">1,000</td></tr><tr><td>เครื่องรับPSI S9 (ช่าง)</td><td class="num">6</td><td class="num">4,140</td><td class="num">1,290</td></tr><tr><td>สาย(เมตร)VAF 2*1.5</td><td class="num">180</td><td class="num">3,960</td><td class="num">639</td></tr><tr><td>พัดลมตั้งโต๊ะ 18 นิ้ว HATARI#M1</td><td class="num">3</td><td class="num">3,750</td><td class="num">540</td></tr><tr><td>สายTHW-A 1x16 100m CONPAC</td><td class="num">4</td><td class="num">3,600</td><td class="num">1,072</td></tr><tr><td>พัดลมผนัง 18 นิ้ว HATARI#M1</td><td class="num">2</td><td class="num">3,100</td><td class="num">580</td></tr><tr><td>เครื่องทำน้ำอุ่นPanasonic 3500W รุ่น DH-3LL1</td><td class="num">1</td><td class="num">2,990</td><td class="num">543</td></tr>
+    </table>
+  </div>
+</div>
+<footer>สร้างโดยระบบติดตามยอดขาย · 2026-07-31</footer>
+</body>
+</html>
